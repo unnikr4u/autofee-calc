@@ -10,17 +10,19 @@ public class AutoShareApp {
 		List<AutoTrip> trips = List.of(
 
 				// ✅ ENABLED
-				new AutoTrip(true, TripTime.AM_7, 300, 20, List.of(Person.SARANG, Person.PALLAVI, Person.NORAH)),
-
+				new AutoTrip(false, TripTime.AM_7, 325, 17, List.of(Person.SARANG, Person.PALLAVI, Person.NORAH)),
 				// ✅ ENABLED
-				new AutoTrip(true, TripTime.AM_8, 250, 20, List.of(Person.SMRITHI, Person.IVANSHI)),
-
+				new AutoTrip(true, TripTime.AM_8, 325, 11, List.of(Person.SARANG, Person.PALLAVI, Person.NORAH,Person.IVANSHI)),
+				// ✅ ENABLED
+				new AutoTrip(true, TripTime.AM_8, 250, 5, List.of(Person.SMRITHI, Person.IVANSHI)),
+                // ✅ ENABLED
+				new AutoTrip(true, TripTime.PM_3_30, 250, 10, List.of(Person.SMRITHI, Person.IVANSHI)),
 				//  ✅ ENABLED
-				new AutoTrip(true, TripTime.PM_3_30, 300, 20,
+				new AutoTrip(true, TripTime.PM_3_30, 325, 11,
 						List.of(Person.SARANG, Person.PALLAVI, Person.NORAH, Person.IVANSHI)),
 
-				// ❌ DISABLED
-				new AutoTrip(false, TripTime.PM_1, 300, 5, List.of(Person.SARANG, Person.PALLAVI, Person.NORAH)));
+				// ✅ ENABLED
+				new AutoTrip(false, TripTime.PM_1, 325, 1, List.of(Person.SARANG, Person.PALLAVI, Person.NORAH)));
 
 		Map<Person, Double> totals = AutoShareCalculator.calculate(trips);
 

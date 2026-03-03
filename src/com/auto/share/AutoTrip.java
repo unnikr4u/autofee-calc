@@ -7,10 +7,10 @@ public class AutoTrip {
 	private boolean enabled;
 	private TripTime tripTime;
 	private int autoFee;
-	private int numberOfTrips;
+	private double numberOfTrips;
 	private List<Person> persons;
 
-	public AutoTrip(boolean enabled, TripTime tripTime, int autoFee, int numberOfTrips, List<Person> persons) {
+	public AutoTrip(boolean enabled, TripTime tripTime, int autoFee, double numberOfTrips, List<Person> persons) {
 
 		this.enabled = enabled;
 		this.tripTime = tripTime;
@@ -31,7 +31,7 @@ public class AutoTrip {
 		return autoFee;
 	}
 
-	public int getNumberOfTrips() {
+	public double getNumberOfTrips() {
 		return numberOfTrips;
 	}
 
